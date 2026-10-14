@@ -41,20 +41,17 @@ p {
 }
 
 .btn-primary {
-  padding: 12px 24px;
-
-  border-radius: 8px;
-
-  background: #ef44445b;
-
+  display: inline-block;
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
   color: white;
-
   text-decoration: none;
-
-  transition: ease-in 0.3s;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .btn-primary:hover {
-
-  background: #ef4444;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
 }

@@ -23,6 +23,7 @@
 
       <div
         class="project-card"
+        (click)="openProject(project)"
         [class.featured]="project.featured">
 
         <div class="project-image">
@@ -40,7 +41,7 @@
           </h3>
 
           <p>
-            {{ project.description }}
+            {{ project.shortDescription }}
           </p>
 
           <div class="tech-list">
@@ -82,6 +83,72 @@
       </div>
 
     }
+
+  </div>
+
+  <div
+    class="modal-overlay"
+    *ngIf="selectedProject"
+    (click)="closeProject()">
+
+    <div
+      class="project-modal"
+      (click)="$event.stopPropagation()">
+
+      <button
+        class="close-btn"
+        (click)="closeProject()">
+        ✕
+      </button>
+
+      <img
+        class="project-image"
+        [src]="'/assets/projects/' + selectedProject.image"
+        [alt]="selectedProject.title">
+
+      <h2>{{ selectedProject.title }}</h2>
+
+      <p class="description">
+        {{ selectedProject.description }}
+      </p>
+
+      <h4>Tecnologías</h4>
+
+      <div class="tech-list">
+        <span
+          *ngFor="let tech of selectedProject.technologies">
+          {{ tech }}
+        </span>
+      </div>
+
+      <h4>Retos técnicos:</h4>
+
+      <ul>
+        <li
+          *ngFor="let challenge of selectedProject.challenges">
+          {{ challenge }}
+        </li>
+      </ul>
+
+      <div class="actions">
+
+        <a
+          class="btn github"
+          [href]="selectedProject.github"
+          target="_blank">
+          GitHub
+        </a>
+
+        <a
+          class="btn demo"
+          [href]="selectedProject.demo"
+          target="_blank">
+          Demo
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 

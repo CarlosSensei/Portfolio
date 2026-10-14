@@ -11,11 +11,11 @@ export class About {
 
   metrics = [
     {
-      value: '20+',
+      value: '15+',
       label: 'Proyectos'
     },
     {
-      value: '5+',
+      value: '20+',
       label: 'Años de experiencia'
     },
     {
@@ -31,7 +31,7 @@ export class About {
   skills = [
     {
       name: 'Software Development',
-      value: 80
+      value: 70
     },
     {
       name: 'Business Analysis & Digital Strategy',
@@ -39,7 +39,7 @@ export class About {
     },
     {
       name: 'Stakeholder & Client Management',
-      value: 75
+      value: 85
     },
     {
       name: 'Structured Problem-Solving',

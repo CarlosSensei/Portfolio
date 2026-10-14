@@ -1,6 +1,5 @@
 .tech-section {
   padding: 6rem 0;
-  background: rgba(255,255,255,0.04);
   overflow: hidden;
 }
 
@@ -37,7 +36,7 @@
 
   border-radius: 16px;
 
-  background: rgba(243, 241, 241, 0.5);
+  background: rgba(255,255,255,0.08);
 
   border: 1px solid rgba(255,255,255,0.08);
 

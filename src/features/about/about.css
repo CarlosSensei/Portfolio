@@ -1,6 +1,6 @@
 .about-section {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto auto;
   padding: 8rem 2rem;
   
 }
@@ -188,6 +188,10 @@
     #00d4ff,
     #6366f1
   );
+}
+
+.dashboard-timeline {
+  margin-top: 4rem;
 }
 
 .dashboard-timeline h3 {
