@@ -1,0 +1,30 @@
+.header {
+  position: sticky;
+  top: 0;
+
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 2rem;
+
+  backdrop-filter: blur(10px);
+
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ef4444;
+}

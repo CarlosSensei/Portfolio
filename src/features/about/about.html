@@ -1,0 +1,217 @@
+<section class="about-section">
+
+  <div class="about-header">
+
+    <span class="section-tag">
+      SOBRE MÍ
+    </span>
+
+    <h2>
+      Tecnología al servicio del negocio
+    </h2>
+
+    <p>
+      Transformo necesidades de negocio en herramientas
+      digitales que simplifican procesos, automatizan tareas
+      y mejoran la productividad de los equipos.
+    </p>
+
+  </div>
+
+  <div class="about-grid">
+
+    <div class="about-card">
+
+      <div class="icon">👨‍💻</div>
+
+      <h3>Software Engineer</h3>
+
+      <p>
+        Desarrollo aplicaciones empresariales
+        escalables con foco en calidad,
+        mantenimiento y experiencia de usuario.
+      </p>
+
+    </div>
+
+    <div class="about-card">
+
+      <div class="icon">📈</div>
+
+      <h3>Orientado al negocio</h3>
+
+      <p>
+        Analizo procesos y detecto oportunidades
+        de mejora para aportar valor más allá
+        del desarrollo técnico.
+      </p>
+
+    </div>
+
+    <div class="about-card">
+
+      <div class="icon">⚙️</div>
+
+      <h3>Automatización</h3>
+
+      <p>
+        Diseño soluciones que reducen tareas
+        repetitivas y permiten trabajar
+        de forma más eficiente.
+      </p>
+
+    </div>
+
+    <div class="about-card">
+
+      <div class="icon">🚀</div>
+
+      <h3>Evolución continua</h3>
+
+      <p>
+        Siempre explorando nuevas tecnologías,
+        patrones de arquitectura y mejores
+        prácticas de desarrollo.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="metrics-grid">
+
+    @for (metric of metrics; track metric.label) {
+
+      <div class="metric-card">
+
+        <div class="metric-value">
+          {{ metric.value }}
+        </div>
+
+        <div class="metric-label">
+          {{ metric.label }}
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+  <div class="skills-card">
+
+    <h3>Especialización</h3>
+
+    @for (skill of skills; track skill.name) {
+
+      <div class="skill-row">
+
+        <div class="skill-header">
+
+          <span>{{ skill.name }}</span>
+
+          <span>{{ skill.value }}%</span>
+
+        </div>
+
+        <div class="progress-bar">
+
+          <div
+            class="progress-fill"
+            [style.width.%]="skill.value">
+          </div>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+  <div class="dashboard-timeline">
+
+    <h3>Timeline Profesional</h3>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <span>2026 - Actualidad</span>
+          <h4>Software Engineer Trainee</h4>
+          <p>Capgemini</p>
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <span>2025 - 2026</span>
+          <h4>Software Developer</h4>
+          <p>Desarrollo aplicaciones empresariales</p>
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <span>2024 - 2025</span>
+          <h4>Director Tienda</h4>
+          <p>Grupo Ametller</p>
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <span>2020 - 2024</span>
+          <h4>Projects Lead Manager</h4>
+          <p>Leroy Merlin</p>
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <span>2019 - 2020</span>
+          <h4>Area Manager</h4>
+          <p>Angel Eyes Eyewear</p>
+        </div>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <span>2007 - 2019</span>
+          <h4>Director tienda</h4>
+          <p>Optica y Audiologia Universitaria</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</section>
+

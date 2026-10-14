@@ -1,0 +1,27 @@
+<section class="tech-section">
+
+  <h2>Technical Stack</h2>
+
+  <div class="carousel">
+
+    <div class="carousel-track">
+
+      @for (tech of technologies; track tech.name) {
+        <div class="tech-card">
+          <img [src]="'/assets/tech/' + tech.icon" [alt]="tech.name">
+          <span>{{ tech.name }}</span>
+        </div>
+      }
+
+      @for (tech of technologies; track tech.name + '-copy') {
+        <div class="tech-card">
+          <img [src]="'/assets/tech/' + tech.icon" [alt]="tech.name">
+          <span>{{ tech.name }}</span>
+        </div>
+      }
+
+    </div>
+
+  </div>
+
+</section>
