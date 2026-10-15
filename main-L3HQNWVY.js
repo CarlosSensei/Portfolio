@@ -6,7 +6,7 @@ ${n.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
       Hace enfasis en un estilo minimalista y moderno que permite acceder a los datos de clientes, pedidos y presupuestos. 
       Adem\xE1s hay un dashboard de indicadores. Una seccion de login para acceder. 
       Es un test para preparar el frontend del crm optico en proceso.
-      `,image:"crm-project.jpg",technologies:["Angular","TypeScript","RxJS","Tailwind"],challenges:["Desarrollo con Angular","Seccion de login","Sidebar"],github:"https://github.com/CarlosSensei/CRM-PLAYGROUND",demo:"#",featured:!0},{title:"Optical CRM",shortDescription:"Gesti\xF3n integral de clientes, graduaciones, presupuestos y seguimiento de pedidos.",description:`
+      `,image:"crm-project.jpg",technologies:["Angular","TypeScript","RxJS","Tailwind"],challenges:["Desarrollo con Angular","Seccion de login","Sidebar"],github:"https://github.com/CarlosSensei/CRM-PLAYGROUND",demo:"https://carlossensei.github.io/CRM-PLAYGROUND",featured:!0},{title:"Optical CRM",shortDescription:"Gesti\xF3n integral de clientes, graduaciones, presupuestos y seguimiento de pedidos.",description:`
       Proyecto de un CRM funcional pensado para retail \xF3ptico.
       De momento es un MVP para presentar como TFG del grado de DAM.
       Intenta recoger todas las acciones del dia a dia en la relacion de empresa y clientes.
