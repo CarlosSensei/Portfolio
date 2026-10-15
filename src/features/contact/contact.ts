@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class Contact {
   
+  sendEmail(): void {
+    window.location.href =
+      'mailto:carloshorrillo@hotmail.com?subject=Contacto desde Portfolio';
+  }
 }
