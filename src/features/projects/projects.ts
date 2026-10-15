@@ -31,7 +31,7 @@ export class Projects {
       ],
       challenges: ['Desarrollo con Angular', 'Seccion de login', 'Sidebar'],
       github: 'https://github.com/CarlosSensei/CRM-PLAYGROUND',
-      demo: '#',
+      demo: 'https://carlossensei.github.io/CRM-PLAYGROUND/',
       featured: true
     },
 
