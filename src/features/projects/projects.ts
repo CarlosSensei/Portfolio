@@ -77,6 +77,24 @@ export class Projects {
     },
 
     {
+      title: 'Brain Games',
+      shortDescription:
+        'Web de juegos mentales sencillos',
+      description: `Web con juegos sencillos mentales tales como el ahorcado, sudoku, etc... 
+      Se busca construir un gameplay en Angular donde crear juegos con lógicas más o menos complejas para crear pequeñas diversiones.
+      Además de servir para profundizar en Angular y en proyectos de lógica `,
+      image: 'games.jpg',
+      technologies: [
+        'Angular',
+        'Github Pages',
+        'Github'
+      ],
+      challenges: ['Logicas de juego', 'Desarrollo con Angular'],
+      github: 'https://github.com/CarlosSensei/BrainGames',
+      demo: 'https://carlossensei.github.io/BrainGames/',
+      featured: false
+    },
+    {
       title: 'AI Governance',
       shortDescription:
         'Panel de gestión y gobierno de iniciativas IA.',
@@ -90,22 +108,7 @@ export class Projects {
       github: 'https://github.com/CarlosSensei/CRM-PLAYGROUND',
       demo: '#',
       featured: false
-    },
-    {
-        title: 'AI Governance',
-        shortDescription:
-          'Panel de gestión y gobierno de iniciativas IA.',
-        description: ` `,
-        image: 'brain.jpg',
-        technologies: [
-          'Azure AI',
-          'Power Platform'
-        ],
-        challenges: [],
-        github: 'https://github.com/CarlosSensei/CRM-PLAYGROUND',
-        demo: '#',
-        featured: false
-      }
+    }
   ];
 
   selectedProject: any = null;
