@@ -58,18 +58,24 @@ export class Projects {
     },
 
     {
-      title: 'Analytics Dashboard',
+      title: 'My Table App',
       shortDescription:
-        'Dashboard orientado a KPIs y reporting empresarial.',
-      description: ` `,
+        'App de reservas de restaurantes. en construccion. Modo cliente ok, pendiente modo restaurante',
+      description: ` Desarrollo de una app de reservas de mesas para restaurantes. Gestion de clientes, restaurantes, mesas, reservas... 
+      Pendiente del desarrollo del modo restaurante para editar datos de contacto, mesas, gestionar reservas, etc... de momento solo usuarios clientes.
+      Pendiente backend con springboot para BBDD y Auth.
+      
+      `,
       image: 'dashboard.jpg',
       technologies: [
-        'ChartJS',
-        'Angular'
+        'Spring Boot',
+        'Angular',
+        'Git',
+        'Typescript'
       ],
-      challenges: [],
-      github: 'https://github.com/CarlosSensei/CRM-PLAYGROUND',
-      demo: '#',
+      challenges: ['Gestion de reservas', 'Gestion de usuarios y claves'],
+      github: 'https://github.com/CarlosSensei/my-table-app',
+      demo: 'https://carlossensei.github.io/my-table-app/',
       featured: false
     },
 
