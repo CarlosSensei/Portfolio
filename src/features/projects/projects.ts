@@ -36,27 +36,24 @@ export class Projects {
     },
 
     {
-      title: 'Optical CRM',
+      title: 'FastRead',
       shortDescription:
-        'Gestión integral de clientes, graduaciones, presupuestos y seguimiento de pedidos.',
+        'Mejora tu lectura con este entrenador palabra a palabra. Con velocidad modificable.',
       description:`
-      Proyecto de un CRM funcional pensado para retail óptico.
-      De momento es un MVP para presentar como TFG del grado de DAM.
-      Intenta recoger todas las acciones del dia a dia en la relacion de empresa y clientes.
-      Logica de negocio en un backend con Spring que da a traves de API rest la info al frontend de Angular
+      Proyecto de lector de archivos de texto .txt .pdf y .epub que cargue el archivo del usuario y lo pase por el lector.
+      El lector muestra palabra a palabra a una velocidad editable. Interfaz suave centrada en el foco en la palabra.
       `,
       image: 'ojo.jpg',
       technologies: [
         'Angular',
-        'Spring Boot',
-        'Java',
+        'Typescript',
         'HTML',
         'CSS',
-        'SQL'
+        'Epub'
       ],
-      challenges: ['Arquitectura DDD', 'Desarrollo con Spring Boot', 'API REST'],
-      github: 'https://github.com/CarlosSensei/CRM-PLAYGROUND',
-      demo: '#',
+      challenges: ['Arquitectura DDD', 'Desarrollo con Angular', 'Gestion de archivos txt, pdf y epub'],
+      github: 'https://github.com/CarlosSensei/fastread',
+      demo: 'https://carlossensei.github.io/fastread/',
       featured: false
     },
 
