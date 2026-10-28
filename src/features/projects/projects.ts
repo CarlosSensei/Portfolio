@@ -1,14 +1,48 @@
-import { Component } from '@angular/core';
-import { NgForOf, NgIf } from '@angular/common';
+import { Component, OnDestroy, OnInit, inject, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   standalone: true,
   selector: 'app-projects',
   templateUrl: './projects.html',
   styleUrl: './projects.css',
-  imports: [NgForOf, NgIf]
+  imports: []
 })
-export class Projects {
+export class Projects implements OnInit, OnDestroy {
+
+  private autoPlayId?: number;
+  private cdr = inject(ChangeDetectorRef);
+
+  ngOnInit(): void {
+    this.startAutoPlay();
+  }
+
+  ngOnDestroy(): void {
+    this.stopAutoPlay();
+  }
+
+  startAutoPlay(): void {
+    
+    this.stopAutoPlay();
+
+    this.autoPlayId = window.setInterval(() => {
+      
+      if (this.expandedIndex === null) {
+        this.next();
+        this.cdr.detectChanges();
+      }
+
+    }, 2000);
+  }
+
+  stopAutoPlay(): void {
+
+    if (this.autoPlayId) {
+      clearInterval(this.autoPlayId);
+      this.autoPlayId = undefined;
+    }
+  }
+
+  activeIndex = 0;
 
   projects = [
     {
@@ -32,7 +66,7 @@ export class Projects {
       challenges: ['Desarrollo con Angular', 'Seccion de login', 'Sidebar'],
       github: 'https://github.com/CarlosSensei/CRM-PLAYGROUND',
       demo: 'https://carlossensei.github.io/CRM-PLAYGROUND/',
-      featured: true
+      accentColor: '#3b82f6'
     },
 
     {
@@ -114,14 +148,49 @@ export class Projects {
     }
   ];
 
-  selectedProject: any = null;
-
-  openProject(project: any): void {
-    this.selectedProject = project;
+  get activeProject() {
+    return this.projects[this.activeIndex];
   }
 
-  closeProject(): void {
-    this.selectedProject = null;
+  setActive(index: number): void {
+    this.activeIndex = index;
+  }
+
+  next(): void {
+    this.activeIndex =
+      (this.activeIndex + 1) % this.projects.length;
+  }
+
+  prev(): void {
+    this.activeIndex =
+      (this.activeIndex - 1 + this.projects.length)
+      % this.projects.length;
+  }
+
+  expandedIndex: number | null = null;
+
+  toggleCard(index: number): void {
+    this.expandedIndex =
+      this.expandedIndex === index ? null : index;
+  }
+
+  getTransform(index: number): string {
+
+    const offset = index - this.activeIndex;
+
+    return `
+      translateX(${offset * 240}px)
+      rotateY(${offset * -30}deg)
+      scale(${offset === 0 ? 1 : 0.85})
+    `;
+  }
+
+  getOpacity(index: number): number {
+    return index === this.activeIndex ? 1 : 0.4;
+  }
+
+  getZIndex(index: number): number {
+    return 100 - Math.abs(index - this.activeIndex);
   }
 
 }

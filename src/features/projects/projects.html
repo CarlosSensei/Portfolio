@@ -1,157 +1,89 @@
-<section class="projects-section">
+<section class="projects-section"
+[style.--accent]="activeProject.accentColor">
 
-  <div class="section-header">
+  <h2 class="title">
+    Proyectos
+  </h2>
 
-    <span class="section-tag">
-      PROYECTOS
-    </span>
+  <div class="coverflow">
 
-    <h2>
-      Proyectos Destacados
-    </h2>
+    @for (project of projects; track project.title; let i = $index) {
 
-    <p>
-      Algunos de los proyectos y soluciones
-      en los que he trabajado.
-    </p>
-
-  </div>
-
-  <div class="projects-grid">
-
-    @for(project of projects; track project.title) {
-
-      <div
+      <article
         class="project-card"
-        (click)="openProject(project)"
-        [class.featured]="project.featured">
+        [class.active]="i === activeIndex"
+        [class.expanded]="expandedIndex === i"
+        [style.transform]="getTransform(i)"
+        [style.opacity]="getOpacity(i)"
+        [style.z-index]="getZIndex(i)"
+        (click)="setActive(i); toggleCard(i)">
 
-        <div class="project-image">
+        <img
+          [src]="'assets/projects/' + project.image"
+          [alt]="project.title">
 
-          <img
-            [src]="'assets/projects/' + project.image"
-            [alt]="project.title">
+        <div class="card-summary">
+
+          <h3>{{ project.title }}</h3>
+
+          <p>{{ project.shortDescription }}</p>
 
         </div>
 
-        <div class="project-content">
+        @if (expandedIndex === i) {
 
-          <h3>
-            {{ project.title }}
-          </h3>
+          <div class="card-details">
 
-          <p>
-            {{ project.shortDescription }}
-          </p>
+            <p class="description">{{ project.description }}</p>
 
-          <div class="tech-list">
+            <div class="techs">
 
-            @for(tech of project.technologies; track tech) {
+              @for (tech of project.technologies; track tech) {
+                <span>{{ tech }}</span>
+              }
 
-              <span class="badge">
-                {{ tech }}
-              </span>
+            </div>
+
+            @if (project.challenges.length > 0) {
+
+              <div class="challenges">
+
+                <h4>Retos técnicos</h4>
+
+                <ul>
+
+                  @for (challenge of project.challenges; track challenge) {
+
+                    <li>{{ challenge }}</li>
+                  }
+
+                </ul>
+
+              </div>
 
             }
-
           </div>
-
-          <div class="project-actions">
+          <div class="links">
 
             <a
-              *ngIf="project.github"
+              class="btn github"
               [href]="project.github"
-              target="_blank">
-
+              target="_blank"
+              (click)="$event.stopPropagation()">
               GitHub
-
             </a>
 
             <a
-              *ngIf="project.demo"
+              class="btn demo"
               [href]="project.demo"
               target="_blank"
-              rel="noopener noreferrer"
-              >
-
+              (click)="$event.stopPropagation()">
               Demo
-
             </a>
 
           </div>
-
-        </div>
-
-      </div>
-
+        }
+      </article>
     }
-
   </div>
-
-  <div
-    class="modal-overlay"
-    *ngIf="selectedProject"
-    (click)="closeProject()">
-
-    <div
-      class="project-modal"
-      (click)="$event.stopPropagation()">
-
-      <button
-        class="close-btn"
-        (click)="closeProject()">
-        ✕
-      </button>
-
-      <img
-        class="project-image"
-        [src]="'assets/projects/' + selectedProject.image"
-        [alt]="selectedProject.title">
-
-      <h2>{{ selectedProject.title }}</h2>
-
-      <p class="description">
-        {{ selectedProject.description }}
-      </p>
-
-      <h4>Tecnologías</h4>
-
-      <div class="tech-list">
-        <span
-          *ngFor="let tech of selectedProject.technologies">
-          {{ tech }}
-        </span>
-      </div>
-
-      <h4>Retos técnicos:</h4>
-
-      <ul>
-        <li
-          *ngFor="let challenge of selectedProject.challenges">
-          {{ challenge }}
-        </li>
-      </ul>
-
-      <div class="actions">
-
-        <a
-          class="btn github"
-          [href]="selectedProject.github"
-          target="_blank">
-          GitHub
-        </a>
-
-        <a
-          class="btn demo"
-          [href]="selectedProject.demo"
-          target="_blank">
-          Demo
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
 </section>
