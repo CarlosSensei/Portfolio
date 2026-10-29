@@ -132,6 +132,22 @@ export class Projects implements OnInit, OnDestroy {
       featured: false
     },
     {
+      title: 'NOVA Ecommerce',
+      shortDescription:
+        'Ecommerce premium de gadgets tecnológicos.',
+      description: `Mini Ecommerce premium de pocos items centrado en la experiencia visual y el desarrollo horizontal. Estilo futurista. 
+      Recrea las dinamicas básicas de un ecommerce pequeño. Falta backend y enlace con pasarelas de pago. Centrado en el ui y el storytelling `,
+      image: 'ecommerce.jpg',
+      technologies: [
+        'GSAP',
+        'Angular'
+      ],
+      challenges: ['Animaciones web', 'Narrativa visual', 'Dinamicas basicas de ecommerce'],
+      github: 'https://github.com/CarlosSensei/mecommerce',
+      demo: 'https://carlossensei.github.io/mecommerce/',
+      featured: false
+    },
+    {
       title: 'AI Governance',
       shortDescription:
         'Panel de gestión y gobierno de iniciativas IA.',
