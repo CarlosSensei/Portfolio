@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:4200/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="module" src="./Portfolio_files/client"></script>
+
+  
+  <title>Portfolio</title>
+  <!--<base href="/">--><base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+<link rel="stylesheet" href="./Portfolio_files/styles.css"><style>
+[_nghost-ng-c1724023777] {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      #020617 0%,
+      #0f172a 50%,
+      #05111f 100%);
+}
+canvas[_ngcontent-ng-c1724023777] {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/*# sourceMappingURL=/background.css.map */</style><style>
+.header[_ngcontent-ng-c1366809427] {
+  position: sticky;
+  top: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+nav[_ngcontent-ng-c1366809427] {
+  display: flex;
+  gap: 2rem;
+}
+nav[_ngcontent-ng-c1366809427]   a[_ngcontent-ng-c1366809427] {
+  color: white;
+  text-decoration: none;
+}
+nav[_ngcontent-ng-c1366809427]   a[_ngcontent-ng-c1366809427]:hover {
+  color: #ef4444;
+}
+/*# sourceMappingURL=/header.css.map */</style><style>
+.footer[_ngcontent-ng-c799594708] {
+  padding: 2rem;
+  text-align: center;
+  color: #94a3b8;
+  border-top: 1px solid #334155;
+}
+/*# sourceMappingURL=/footer.css.map */</style><style>
+.hero[_ngcontent-ng-c638185239] {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-content[_ngcontent-ng-c638185239] {
+  max-width: 800px;
+}
+h1[_ngcontent-ng-c638185239] {
+  font-size: 4rem;
+  color: white;
+}
+h2[_ngcontent-ng-c638185239] {
+  color: #ef4444;
+  margin-top: 1rem;
+}
+p[_ngcontent-ng-c638185239] {
+  margin-top: 1.5rem;
+  color: #cbd5e1;
+  font-size: 1.2rem;
+}
+.actions[_ngcontent-ng-c638185239] {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn-primary[_ngcontent-ng-c638185239] {
+  display: inline-block;
+  padding: 15px 35px;
+  background:
+    linear-gradient(
+      135deg,
+      #38bdf8,
+      #2563eb);
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-primary[_ngcontent-ng-c638185239]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+}
+/*# sourceMappingURL=/hero.css.map */</style><style>
+.tech-section[_ngcontent-ng-c2248656466] {
+  padding: 6rem 0;
+  overflow: hidden;
+}
+.tech-section[_ngcontent-ng-c2248656466]   h2[_ngcontent-ng-c2248656466] {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+  font-size: 2rem;
+}
+.carousel[_ngcontent-ng-c2248656466] {
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-track[_ngcontent-ng-c2248656466] {
+  display: flex;
+  width: fit-content;
+  animation: _ngcontent-ng-c2248656466_scroll 35s linear infinite;
+}
+.tech-card[_ngcontent-ng-c2248656466] {
+  min-width: 180px;
+  height: 120px;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: 0.25s;
+}
+.tech-card[_ngcontent-ng-c2248656466]:hover {
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+.tech-card[_ngcontent-ng-c2248656466]   img[_ngcontent-ng-c2248656466] {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.tech-card[_ngcontent-ng-c2248656466]   span[_ngcontent-ng-c2248656466] {
+  margin-top: 12px;
+  color: white;
+  font-size: 0.9rem;
+}
+@keyframes _ngcontent-ng-c2248656466_scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.carousel-track[_ngcontent-ng-c2248656466]:hover {
+  animation-play-state: paused;
+}
+.tech-card[_ngcontent-ng-c2248656466]:hover   img[_ngcontent-ng-c2248656466] {
+  filter: drop-shadow(0 0 8px #00d4ff) drop-shadow(0 0 16px #00d4ff);
+}
+.carousel[_ngcontent-ng-c2248656466] {
+  position: relative;
+}
+.carousel[_ngcontent-ng-c2248656466]::before, 
+.carousel[_ngcontent-ng-c2248656466]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+}
+.carousel[_ngcontent-ng-c2248656466]::before {
+  left: 0;
+  background:
+    linear-gradient(
+      to right,
+      #020617,
+      transparent);
+}
+.carousel[_ngcontent-ng-c2248656466]::after {
+  right: 0;
+  background:
+    linear-gradient(
+      to left,
+      #020617,
+      transparent);
+}
+/*# sourceMappingURL=/tech-stack.css.map */</style><style>
+.about-section[_ngcontent-ng-c695573733] {
+  max-width: 1200px;
+  margin: auto auto;
+  padding: 8rem 2rem;
+}
+.about-header[_ngcontent-ng-c695573733] {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.section-tag[_ngcontent-ng-c695573733] {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+  font-size: .8rem;
+  letter-spacing: 2px;
+}
+.about-header[_ngcontent-ng-c695573733]   h2[_ngcontent-ng-c695573733] {
+  margin-top: 1.5rem;
+  font-size: 3rem;
+  color: white;
+}
+.about-header[_ngcontent-ng-c695573733]   p[_ngcontent-ng-c695573733] {
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  color: #94a3b8;
+  line-height: 1.8;
+}
+.about-grid[_ngcontent-ng-c695573733] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.about-card[_ngcontent-ng-c695573733] {
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: all .3s ease;
+}
+.about-card[_ngcontent-ng-c695573733]:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 212, 255, .4);
+  box-shadow: 0 0 25px rgba(0, 212, 255, .15);
+}
+.icon[_ngcontent-ng-c695573733] {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-card[_ngcontent-ng-c695573733]   h3[_ngcontent-ng-c695573733] {
+  color: white;
+  margin-bottom: 1rem;
+}
+.about-card[_ngcontent-ng-c695573733]   p[_ngcontent-ng-c695573733] {
+  color: #94a3b8;
+  line-height: 1.7;
+}
+.metrics-section[_ngcontent-ng-c695573733] {
+  margin-top: 6rem;
+}
+.metrics-grid[_ngcontent-ng-c695573733] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.metric-card[_ngcontent-ng-c695573733] {
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.metric-card[_ngcontent-ng-c695573733]:hover {
+  transform: translateY(-6px);
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px rgba(0, 212, 255, .2);
+}
+.metric-value[_ngcontent-ng-c695573733] {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00d4ff;
+}
+.metric-label[_ngcontent-ng-c695573733] {
+  color: #94a3b8;
+}
+.skills-card[_ngcontent-ng-c695573733] {
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .08);
+}
+.skills-card[_ngcontent-ng-c695573733]   h3[_ngcontent-ng-c695573733] {
+  color: white;
+  margin-bottom: 2rem;
+}
+.skill-row[_ngcontent-ng-c695573733] {
+  margin-bottom: 1.5rem;
+}
+.skill-header[_ngcontent-ng-c695573733] {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: .5rem;
+}
+.progress-bar[_ngcontent-ng-c695573733] {
+  height: 12px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .08);
+}
+.progress-fill[_ngcontent-ng-c695573733] {
+  height: 100%;
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      90deg,
+      #00d4ff,
+      #6366f1);
+}
+.dashboard-timeline[_ngcontent-ng-c695573733] {
+  margin-top: 4rem;
+}
+.dashboard-timeline[_ngcontent-ng-c695573733]   h3[_ngcontent-ng-c695573733] {
+  text-align: center;
+  margin: 2rem;
+  font-size: larger;
+  font-weight: bold;
+  color: white;
+}
+.timeline[_ngcontent-ng-c695573733] {
+  position: relative;
+  max-width: 1000px;
+  margin: 4rem auto;
+}
+.timeline[_ngcontent-ng-c695573733]::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: #00d4ff;
+  box-shadow: 0 0 10px #00d4ff;
+}
+.timeline-item[_ngcontent-ng-c695573733] {
+  position: relative;
+  width: 50%;
+  padding: 0 40px;
+  margin-bottom: 50px;
+}
+.timeline-item[_ngcontent-ng-c695573733]:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+.timeline-item[_ngcontent-ng-c695573733]:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+.timeline-dot[_ngcontent-ng-c695573733] {
+  position: absolute;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00d4ff;
+  box-shadow: 0 0 15px #00d4ff;
+}
+.timeline-item[_ngcontent-ng-c695573733]:nth-child(odd)   .timeline-dot[_ngcontent-ng-c695573733] {
+  right: -9px;
+}
+.timeline-item[_ngcontent-ng-c695573733]:nth-child(even)   .timeline-dot[_ngcontent-ng-c695573733] {
+  left: -9px;
+}
+.timeline-content[_ngcontent-ng-c695573733] {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.timeline-content[_ngcontent-ng-c695573733]   h4[_ngcontent-ng-c695573733] {
+  color: white;
+}
+.timeline-content[_ngcontent-ng-c695573733]   p[_ngcontent-ng-c695573733] {
+  color: #94a3b8;
+}
+span[_ngcontent-ng-c695573733] {
+  color: white;
+}
+/*# sourceMappingURL=/about.css.map */</style><style>
+.projects-section[_ngcontent-ng-c1154109564] {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  transition: background 0.8s ease;
+}
+.title[_ngcontent-ng-c1154109564] {
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #fff;
+}
+.coverflow[_ngcontent-ng-c1154109564] {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  perspective: 1800px;
+}
+.project-card[_ngcontent-ng-c1154109564] {
+  position: absolute;
+  width: 600px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 24px;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: all 0.6s ease;
+  opacity: 0.4;
+}
+.project-card.active[_ngcontent-ng-c1154109564] {
+  transform: translateX(0) rotateY(0) scale(1);
+  opacity: 1;
+  z-index: 10;
+  box-shadow:
+    0 0 15px rgba(0, 191, 255, 0.6),
+    0 0 30px rgba(0, 191, 255, 0.45),
+    0 0 60px rgba(0, 191, 255, 0.3),
+    0 0 100px rgba(0, 191, 255, 0.15);
+}
+.project-card.expanded[_ngcontent-ng-c1154109564] {
+  width: 680px;
+  height: 830px;
+  opacity: 1;
+  z-index: 999;
+  transform: translateX(0) rotateY(0) scale(1.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.project-card[_ngcontent-ng-c1154109564]   img[_ngcontent-ng-c1154109564] {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.card-summary[_ngcontent-ng-c1154109564] {
+  padding: 1.2rem;
+}
+.card-summary[_ngcontent-ng-c1154109564]   h3[_ngcontent-ng-c1154109564] {
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+.card-summary[_ngcontent-ng-c1154109564]   p[_ngcontent-ng-c1154109564] {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+.card-details[_ngcontent-ng-c1154109564] {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 1.2rem;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+.project-card.expanded[_ngcontent-ng-c1154109564] {
+  border-color: rgba(249, 115, 22, 0.5);
+  box-shadow:
+    0 0 20px rgba(249, 115, 22, 0.25),
+    0 0 50px rgba(249, 115, 22, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.project-card.expanded[_ngcontent-ng-c1154109564]   .card-details[_ngcontent-ng-c1154109564] {
+  max-height: 1200px;
+  opacity: 1;
+}
+.description[_ngcontent-ng-c1154109564] {
+  margin-top: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+.techs[_ngcontent-ng-c1154109564] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+.techs[_ngcontent-ng-c1154109564]   span[_ngcontent-ng-c1154109564] {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.challenges[_ngcontent-ng-c1154109564] {
+  margin-top: 1rem;
+}
+.challenges[_ngcontent-ng-c1154109564]   h4[_ngcontent-ng-c1154109564] {
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+.challenges[_ngcontent-ng-c1154109564]   ul[_ngcontent-ng-c1154109564] {
+  padding-left: 1.25rem;
+}
+.challenges[_ngcontent-ng-c1154109564]   li[_ngcontent-ng-c1154109564] {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.links[_ngcontent-ng-c1154109564] {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.btn[_ngcontent-ng-c1154109564] {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  margin: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.btn[_ngcontent-ng-c1154109564]:hover {
+  transform: translateY(-3px);
+}
+.github[_ngcontent-ng-c1154109564] {
+  background: #5084b8;
+}
+.demo[_ngcontent-ng-c1154109564] {
+  background: #5084b8;
+}
+.nav-btn[_ngcontent-ng-c1154109564] {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  background: rgba(255, 255, 255, .1);
+  transition: .3s;
+}
+.nav-btn[_ngcontent-ng-c1154109564]:hover {
+  background: var(--primary-color);
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .coverflow[_ngcontent-ng-c1154109564] {
+    height: auto;
+    perspective: none;
+  }
+  .project-card[_ngcontent-ng-c1154109564], 
+   .project-card.active[_ngcontent-ng-c1154109564], 
+   .project-card.expanded[_ngcontent-ng-c1154109564] {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    transform: none;
+    margin: 0 auto;
+  }
+  .project-card[_ngcontent-ng-c1154109564]:not(.active) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=/projects.css.map */</style><style>
+.contact-section[_ngcontent-ng-c2924132265] {
+  padding: 120px 10%;
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+}
+.contact-header[_ngcontent-ng-c2924132265] {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.contact-header[_ngcontent-ng-c2924132265]   h2[_ngcontent-ng-c2924132265] {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.contact-header[_ngcontent-ng-c2924132265]   p[_ngcontent-ng-c2924132265] {
+  color: #94a3b8;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+.contact-grid[_ngcontent-ng-c2924132265] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 80px;
+}
+.contact-card[_ngcontent-ng-c2924132265] {
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s;
+}
+.contact-card[_ngcontent-ng-c2924132265]:hover {
+  transform: translateY(-8px);
+  border-color: #38bdf8;
+}
+.contact-card[_ngcontent-ng-c2924132265]   .icon[_ngcontent-ng-c2924132265] {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+.contact-card[_ngcontent-ng-c2924132265]   h3[_ngcontent-ng-c2924132265] {
+  margin-bottom: 10px;
+}
+.contact-card[_ngcontent-ng-c2924132265]   a[_ngcontent-ng-c2924132265] {
+  color: #38bdf8;
+  text-decoration: none;
+}
+.contact-card[_ngcontent-ng-c2924132265]   a[_ngcontent-ng-c2924132265]:hover {
+  color: #7dd3fc;
+}
+.cta[_ngcontent-ng-c2924132265] {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+.cta[_ngcontent-ng-c2924132265]   h3[_ngcontent-ng-c2924132265] {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.cta[_ngcontent-ng-c2924132265]   p[_ngcontent-ng-c2924132265] {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+.cta-button[_ngcontent-ng-c2924132265] {
+  display: inline-block;
+  padding: 15px 35px;
+  background:
+    linear-gradient(
+      135deg,
+      #38bdf8,
+      #2563eb);
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.cta-button[_ngcontent-ng-c2924132265]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+}
+/*# sourceMappingURL=/contact.css.map */</style><style>
+.experience-section[_ngcontent-ng-c2365537459] {
+  position: relative;
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+.section-title[_ngcontent-ng-c2365537459] {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  color: white;
+}
+.timeline[_ngcontent-ng-c2365537459] {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+.timeline-line[_ngcontent-ng-c2365537459] {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, .15);
+  transform: translateX(-50%);
+}
+.timeline-progress[_ngcontent-ng-c2365537459] {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 0;
+  transform: translateX(-50%);
+  background: #0059ff;
+  box-shadow:
+    0 0 10px #008cff,
+    0 0 20px #00d9ff,
+    0 0 40px #0011ff;
+}
+.timeline-item[_ngcontent-ng-c2365537459] {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 6rem;
+}
+.timeline-item.reverse[_ngcontent-ng-c2365537459] {
+  justify-content: flex-end;
+}
+.card[_ngcontent-ng-c2365537459] {
+  width: 45%;
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .05);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, .1);
+  transition: all .4s ease;
+}
+.card[_ngcontent-ng-c2365537459]:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 229, 255, .2), 0 0 40px rgba(0, 229, 255, .15);
+}
+.dot[_ngcontent-ng-c2365537459] {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #0059ff;
+  box-shadow:
+    0 0 10px #008cff,
+    0 0 20px #00d9ff,
+    0 0 40px #0011ff;
+}
+.year[_ngcontent-ng-c2365537459] {
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+.card[_ngcontent-ng-c2365537459]   h3[_ngcontent-ng-c2365537459] {
+  color: rgba(255, 255, 255, .65);
+  margin: .5rem 0;
+  font-size: 1.8rem;
+}
+.card[_ngcontent-ng-c2365537459]   h4[_ngcontent-ng-c2365537459] {
+  color: rgba(255, 255, 255, .65);
+  margin-bottom: 1rem;
+}
+.card[_ngcontent-ng-c2365537459]   p[_ngcontent-ng-c2365537459] {
+  color: rgba(255, 255, 255, .8);
+}
+@media (max-width: 768px) {
+  .timeline-line[_ngcontent-ng-c2365537459], 
+   .timeline-progress[_ngcontent-ng-c2365537459] {
+    left: 20px;
+  }
+  .dot[_ngcontent-ng-c2365537459] {
+    left: 20px;
+  }
+  .timeline-item[_ngcontent-ng-c2365537459], 
+   .timeline-item.reverse[_ngcontent-ng-c2365537459] {
+    justify-content: flex-start;
+  }
+  .card[_ngcontent-ng-c2365537459] {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+}
+/*# sourceMappingURL=/time-line.css.map */</style></head>
+<body>
+  <app-root ng-version="22.2.2"><app-background _nghost-ng-c1724023777=""><canvas _ngcontent-ng-c1724023777="" width="1920" height="911"></canvas></app-background><app-header _nghost-ng-c1366809427=""><header _ngcontent-ng-c1366809427="" class="header"><div _ngcontent-ng-c1366809427="" class="logo"></div><nav _ngcontent-ng-c1366809427=""><a _ngcontent-ng-c1366809427="" routerlink="/" href="http://localhost:4200/">Inicio</a><a _ngcontent-ng-c1366809427="" routerlink="/about" href="http://localhost:4200/about">Sobre mí</a><a _ngcontent-ng-c1366809427="" routerlink="/projects" href="http://localhost:4200/projects">Proyectos</a><a _ngcontent-ng-c1366809427="" routerlink="/contact" href="http://localhost:4200/contact">Contacto</a></nav></header></app-header><main class="main-container"><router-outlet></router-outlet><app-home><app-hero _nghost-ng-c638185239=""><section _ngcontent-ng-c638185239="" class="hero"><div _ngcontent-ng-c638185239="" class="hero-content"><h1 _ngcontent-ng-c638185239=""> Carlos Horrillo Otero </h1><h2 _ngcontent-ng-c638185239=""> Software Engineer </h2><p _ngcontent-ng-c638185239=""> Analizo problemas, diseño soluciones y desarrollo aplicaciones que mejoran la productividad y aceleran el crecimiento del negocio. </p><div _ngcontent-ng-c638185239="" class="actions"><button _ngcontent-ng-c638185239="" routerlink="/contact" class="btn-primary" tabindex="0"> Contacta </button></div></div></section></app-hero><app-tech-stack _nghost-ng-c2248656466=""><section _ngcontent-ng-c2248656466="" class="tech-section"><h2 _ngcontent-ng-c2248656466="">Technical Stack</h2><div _ngcontent-ng-c2248656466="" class="carousel"><div _ngcontent-ng-c2248656466="" class="carousel-track"><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/angular.svg" alt="Angular"><span _ngcontent-ng-c2248656466="">Angular</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/typescript.svg" alt="TypeScript"><span _ngcontent-ng-c2248656466="">TypeScript</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/javascript.svg" alt="JavaScript"><span _ngcontent-ng-c2248656466="">JavaScript</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/html5.svg" alt="HTML5"><span _ngcontent-ng-c2248656466="">HTML5</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/css3.svg" alt="CSS3"><span _ngcontent-ng-c2248656466="">CSS3</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/java.svg" alt="Java"><span _ngcontent-ng-c2248656466="">Java</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/spring.svg" alt="Spring"><span _ngcontent-ng-c2248656466="">Spring</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/postgressql.svg" alt="PostgresSQL"><span _ngcontent-ng-c2248656466="">PostgresSQL</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/git.svg" alt="Git"><span _ngcontent-ng-c2248656466="">Git</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/docker.svg" alt="Docker"><span _ngcontent-ng-c2248656466="">Docker</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/androidstudio.svg" alt="Android Studio"><span _ngcontent-ng-c2248656466="">Android Studio</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/figma.svg" alt="Figma"><span _ngcontent-ng-c2248656466="">Figma</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/intellij.svg" alt="IntelliJ IDEA"><span _ngcontent-ng-c2248656466="">IntelliJ IDEA</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/materialui.svg" alt="Material UI"><span _ngcontent-ng-c2248656466="">Material UI</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/mongodb.svg" alt="MongoDB"><span _ngcontent-ng-c2248656466="">MongoDB</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/npm.svg" alt="NPM"><span _ngcontent-ng-c2248656466="">NPM</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/python.svg" alt="Python"><span _ngcontent-ng-c2248656466="">Python</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/react.svg" alt="React"><span _ngcontent-ng-c2248656466="">React</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/tailwindcss.svg" alt="Tailwind CSS"><span _ngcontent-ng-c2248656466="">Tailwind CSS</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/threejs.svg" alt="Three.js"><span _ngcontent-ng-c2248656466="">Three.js</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/unity.svg" alt="Unity"><span _ngcontent-ng-c2248656466="">Unity</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/vscode.svg" alt="VS Code"><span _ngcontent-ng-c2248656466="">VS Code</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/vite.svg" alt="Vite"><span _ngcontent-ng-c2248656466="">Vite</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/webflow.svg" alt="Webflow"><span _ngcontent-ng-c2248656466="">Webflow</span></div><!--container--><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/angular.svg" alt="Angular"><span _ngcontent-ng-c2248656466="">Angular</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/typescript.svg" alt="TypeScript"><span _ngcontent-ng-c2248656466="">TypeScript</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/javascript.svg" alt="JavaScript"><span _ngcontent-ng-c2248656466="">JavaScript</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/html5.svg" alt="HTML5"><span _ngcontent-ng-c2248656466="">HTML5</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/css3.svg" alt="CSS3"><span _ngcontent-ng-c2248656466="">CSS3</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/java.svg" alt="Java"><span _ngcontent-ng-c2248656466="">Java</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/spring.svg" alt="Spring"><span _ngcontent-ng-c2248656466="">Spring</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/postgressql.svg" alt="PostgresSQL"><span _ngcontent-ng-c2248656466="">PostgresSQL</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/git.svg" alt="Git"><span _ngcontent-ng-c2248656466="">Git</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/docker.svg" alt="Docker"><span _ngcontent-ng-c2248656466="">Docker</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/androidstudio.svg" alt="Android Studio"><span _ngcontent-ng-c2248656466="">Android Studio</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/figma.svg" alt="Figma"><span _ngcontent-ng-c2248656466="">Figma</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/intellij.svg" alt="IntelliJ IDEA"><span _ngcontent-ng-c2248656466="">IntelliJ IDEA</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/materialui.svg" alt="Material UI"><span _ngcontent-ng-c2248656466="">Material UI</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/mongodb.svg" alt="MongoDB"><span _ngcontent-ng-c2248656466="">MongoDB</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/npm.svg" alt="NPM"><span _ngcontent-ng-c2248656466="">NPM</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/python.svg" alt="Python"><span _ngcontent-ng-c2248656466="">Python</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/react.svg" alt="React"><span _ngcontent-ng-c2248656466="">React</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/tailwindcss.svg" alt="Tailwind CSS"><span _ngcontent-ng-c2248656466="">Tailwind CSS</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/threejs.svg" alt="Three.js"><span _ngcontent-ng-c2248656466="">Three.js</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/unity.svg" alt="Unity"><span _ngcontent-ng-c2248656466="">Unity</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/vscode.svg" alt="VS Code"><span _ngcontent-ng-c2248656466="">VS Code</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/vite.svg" alt="Vite"><span _ngcontent-ng-c2248656466="">Vite</span></div><div _ngcontent-ng-c2248656466="" class="tech-card"><img _ngcontent-ng-c2248656466="" src="./Portfolio_files/webflow.svg" alt="Webflow"><span _ngcontent-ng-c2248656466="">Webflow</span></div><!--container--></div></div></section></app-tech-stack><app-about _nghost-ng-c695573733=""><section _ngcontent-ng-c695573733="" class="about-section"><div _ngcontent-ng-c695573733="" class="about-header"><span _ngcontent-ng-c695573733="" class="section-tag"> SOBRE MÍ </span><h2 _ngcontent-ng-c695573733=""> Tecnología al servicio del negocio </h2><p _ngcontent-ng-c695573733=""> Transformo necesidades de negocio en herramientas digitales que simplifican procesos, automatizan tareas y mejoran la productividad de los equipos. </p></div><div _ngcontent-ng-c695573733="" class="about-grid"><div _ngcontent-ng-c695573733="" class="about-card"><div _ngcontent-ng-c695573733="" class="icon">👨‍💻</div><h3 _ngcontent-ng-c695573733="">Software Engineer</h3><p _ngcontent-ng-c695573733=""> Desarrollo aplicaciones empresariales escalables con foco en calidad, mantenimiento y experiencia de usuario. </p></div><div _ngcontent-ng-c695573733="" class="about-card"><div _ngcontent-ng-c695573733="" class="icon">📈</div><h3 _ngcontent-ng-c695573733="">Orientado al negocio</h3><p _ngcontent-ng-c695573733=""> Analizo procesos y detecto oportunidades de mejora para aportar valor más allá del desarrollo técnico. </p></div><div _ngcontent-ng-c695573733="" class="about-card"><div _ngcontent-ng-c695573733="" class="icon">⚙️</div><h3 _ngcontent-ng-c695573733="">Automatización</h3><p _ngcontent-ng-c695573733=""> Diseño soluciones que reducen tareas repetitivas y permiten trabajar de forma más eficiente. </p></div><div _ngcontent-ng-c695573733="" class="about-card"><div _ngcontent-ng-c695573733="" class="icon">🚀</div><h3 _ngcontent-ng-c695573733="">Evolución continua</h3><p _ngcontent-ng-c695573733=""> Siempre explorando nuevas tecnologías, patrones de arquitectura y mejores prácticas de desarrollo. </p></div></div></section></app-about><app-time-line _nghost-ng-c2365537459=""><section _ngcontent-ng-c2365537459="" id="experience" class="experience-section"><div _ngcontent-ng-c2365537459="" class="background-glow"></div><h2 _ngcontent-ng-c2365537459="" class="section-title"> Timeline </h2><div _ngcontent-ng-c2365537459="" class="timeline"><div _ngcontent-ng-c2365537459="" class="timeline-line"></div><div _ngcontent-ng-c2365537459="" class="timeline-progress"></div><div _ngcontent-ng-c2365537459="" class="timeline-item"><div _ngcontent-ng-c2365537459="" class="card"><span _ngcontent-ng-c2365537459="" class="year"> 2026 - Actualidad </span><h3 _ngcontent-ng-c2365537459=""> Software Engineer Intern </h3><h4 _ngcontent-ng-c2365537459=""> Capgemini </h4><p _ngcontent-ng-c2365537459=""> Desarrollo de Aplicaciones Corporativas. </p></div><div _ngcontent-ng-c2365537459="" class="dot"></div></div><div _ngcontent-ng-c2365537459="" class="timeline-item reverse"><div _ngcontent-ng-c2365537459="" class="card"><span _ngcontent-ng-c2365537459="" class="year"> 2025 - 2026 </span><h3 _ngcontent-ng-c2365537459=""> FullStack Developer Student </h3><h4 _ngcontent-ng-c2365537459=""> Prometeo FP </h4><p _ngcontent-ng-c2365537459=""> Desarrollo de Aplicaciones multiplataforma. </p></div><div _ngcontent-ng-c2365537459="" class="dot"></div></div><div _ngcontent-ng-c2365537459="" class="timeline-item"><div _ngcontent-ng-c2365537459="" class="card"><span _ngcontent-ng-c2365537459="" class="year"> 2024 - 2025 </span><h3 _ngcontent-ng-c2365537459=""> Director de Tienda </h3><h4 _ngcontent-ng-c2365537459=""> Grupo Ametller </h4><p _ngcontent-ng-c2365537459=""> Director de Tienda de alimentación. </p></div><div _ngcontent-ng-c2365537459="" class="dot"></div></div><div _ngcontent-ng-c2365537459="" class="timeline-item reverse"><div _ngcontent-ng-c2365537459="" class="card"><span _ngcontent-ng-c2365537459="" class="year"> 2020 - 2024 </span><h3 _ngcontent-ng-c2365537459=""> Lider Mundo Proyectos </h3><h4 _ngcontent-ng-c2365537459=""> Leroy Merlin </h4><p _ngcontent-ng-c2365537459=""> Líder de las secciones proyecto. </p></div><div _ngcontent-ng-c2365537459="" class="dot"></div></div><div _ngcontent-ng-c2365537459="" class="timeline-item"><div _ngcontent-ng-c2365537459="" class="card"><span _ngcontent-ng-c2365537459="" class="year"> 2019 - 2020 </span><h3 _ngcontent-ng-c2365537459=""> Sales Area Manager </h3><h4 _ngcontent-ng-c2365537459=""> Angel Eyes Eyewear </h4><p _ngcontent-ng-c2365537459=""> Responsable ventas zona NorEste. </p></div><div _ngcontent-ng-c2365537459="" class="dot"></div></div><div _ngcontent-ng-c2365537459="" class="timeline-item reverse"><div _ngcontent-ng-c2365537459="" class="card"><span _ngcontent-ng-c2365537459="" class="year"> 2007 - 2019 </span><h3 _ngcontent-ng-c2365537459=""> Director Tienda </h3><h4 _ngcontent-ng-c2365537459=""> Óptica y Audiología Universitaria </h4><p _ngcontent-ng-c2365537459=""> Director de tienda. </p></div><div _ngcontent-ng-c2365537459="" class="dot"></div></div><!--container--></div></section></app-time-line><app-projects _nghost-ng-c1154109564=""><section _ngcontent-ng-c1154109564="" class="projects-section" style=""><h2 _ngcontent-ng-c1154109564="" class="title"> Proyectos </h2><div _ngcontent-ng-c1154109564="" class="coverflow"><article _ngcontent-ng-c1154109564="" class="project-card" style="transform: translateX(-960px) rotateY(120deg) scale(0.85); opacity: 0.4; z-index: 96;"><img _ngcontent-ng-c1154109564="" src="./Portfolio_files/crm-project.jpg" alt="CRM Playground"><div _ngcontent-ng-c1154109564="" class="card-summary"><h3 _ngcontent-ng-c1154109564="">CRM Playground</h3><p _ngcontent-ng-c1154109564="">Aplicación CRM desarrollada en Angular para la gestión de clientes, presupuestos, pedidos y métricas de negocio.</p></div><!--container--></article><article _ngcontent-ng-c1154109564="" class="project-card" style="transform: translateX(-720px) rotateY(90deg) scale(0.85); opacity: 0.4; z-index: 97;"><img _ngcontent-ng-c1154109564="" src="./Portfolio_files/ojo.jpg" alt="FastRead"><div _ngcontent-ng-c1154109564="" class="card-summary"><h3 _ngcontent-ng-c1154109564="">FastRead</h3><p _ngcontent-ng-c1154109564="">Mejora tu lectura con este entrenador palabra a palabra. Con velocidad modificable.</p></div><!--container--></article><article _ngcontent-ng-c1154109564="" class="project-card" style="transform: translateX(-480px) rotateY(60deg) scale(0.85); opacity: 0.4; z-index: 98;"><img _ngcontent-ng-c1154109564="" src="./Portfolio_files/dashboard.jpg" alt="My Table App"><div _ngcontent-ng-c1154109564="" class="card-summary"><h3 _ngcontent-ng-c1154109564="">My Table App</h3><p _ngcontent-ng-c1154109564="">App de reservas de restaurantes. en construccion. Modo cliente ok, pendiente modo restaurante</p></div><!--container--></article><article _ngcontent-ng-c1154109564="" class="project-card" style="transform: translateX(-240px) rotateY(30deg) scale(0.85); opacity: 0.4; z-index: 99;"><img _ngcontent-ng-c1154109564="" src="./Portfolio_files/games.jpg" alt="Brain Games"><div _ngcontent-ng-c1154109564="" class="card-summary"><h3 _ngcontent-ng-c1154109564="">Brain Games</h3><p _ngcontent-ng-c1154109564="">Web de juegos mentales sencillos</p></div><!--container--></article><article _ngcontent-ng-c1154109564="" class="project-card active" style="transform: translateX(0px) rotateY(0deg) scale(1); opacity: 1; z-index: 100;"><img _ngcontent-ng-c1154109564="" src="./Portfolio_files/ecommerce.jpg" alt="NOVA Ecommerce"><div _ngcontent-ng-c1154109564="" class="card-summary"><h3 _ngcontent-ng-c1154109564="">NOVA Ecommerce</h3><p _ngcontent-ng-c1154109564="">Ecommerce premium de gadgets tecnológicos.</p></div><!--container--></article><article _ngcontent-ng-c1154109564="" class="project-card" style="transform: translateX(240px) rotateY(-30deg) scale(0.85); opacity: 0.4; z-index: 99;"><img _ngcontent-ng-c1154109564="" src="./Portfolio_files/shark.jpg" alt="Flappy Fish"><div _ngcontent-ng-c1154109564="" class="card-summary"><h3 _ngcontent-ng-c1154109564="">Flappy Fish</h3><p _ngcontent-ng-c1154109564="">Minijuego de superar barreras de coral.</p></div><!--container--></article><article _ngcontent-ng-c1154109564="" class="project-card" style="transform: translateX(480px) rotateY(-60deg) scale(0.85); opacity: 0.4; z-index: 98;"><img _ngcontent-ng-c1154109564="" src="./Portfolio_files/brain.jpg" alt="AI Governance"><div _ngcontent-ng-c1154109564="" class="card-summary"><h3 _ngcontent-ng-c1154109564="">AI Governance</h3><p _ngcontent-ng-c1154109564="">Panel de gestión y gobierno de iniciativas IA.</p></div><!--container--></article><!--container--></div></section></app-projects><app-contact _nghost-ng-c2924132265=""><section _ngcontent-ng-c2924132265="" id="contact" class="contact-section"><div _ngcontent-ng-c2924132265="" class="contact-header"><h2 _ngcontent-ng-c2924132265="">Hablemos</h2><p _ngcontent-ng-c2924132265=""> Transformo necesidades de negocio en soluciones digitales, automatizaciones y productos escalables. </p></div><div _ngcontent-ng-c2924132265="" class="contact-grid"><div _ngcontent-ng-c2924132265="" class="contact-card"><span _ngcontent-ng-c2924132265="" class="icon">📧</span><h3 _ngcontent-ng-c2924132265="">Email</h3><a _ngcontent-ng-c2924132265="" href="mailto:carloshorrillo@hotmail.com"> carloshorrillo@hotmail.com </a></div><div _ngcontent-ng-c2924132265="" class="contact-card"><span _ngcontent-ng-c2924132265="" class="icon">💼</span><h3 _ngcontent-ng-c2924132265="">LinkedIn</h3><a _ngcontent-ng-c2924132265="" href="https://linkedin.com/in/carlos-horrillo" target="_blank" rel="noopener noreferrer"> Ver perfil </a></div><div _ngcontent-ng-c2924132265="" class="contact-card"><span _ngcontent-ng-c2924132265="" class="icon">💻</span><h3 _ngcontent-ng-c2924132265="">GitHub</h3><a _ngcontent-ng-c2924132265="" href="https://github.com/CarlosSensei" target="_blank" rel="noopener noreferrer"> github.com/CarlosSensei </a></div><div _ngcontent-ng-c2924132265="" class="contact-card"><span _ngcontent-ng-c2924132265="" class="icon">📍</span><h3 _ngcontent-ng-c2924132265="">Ubicación</h3><p _ngcontent-ng-c2924132265="">Barcelona, España</p></div></div><div _ngcontent-ng-c2924132265="" class="cta"><h3 _ngcontent-ng-c2924132265="">¿Tienes una idea o un reto tecnológico?</h3><p _ngcontent-ng-c2924132265=""> Estoy abierto a colaborar en proyectos de desarrollo, automatización de procesos y transformación digital. </p><button _ngcontent-ng-c2924132265="" class="cta-button"> Contactar </button></div></section></app-contact></app-home><!--container--></main><app-footer _nghost-ng-c799594708=""><footer _ngcontent-ng-c799594708="" class="footer"> © 2026 Carlos Horrillo Otero
+</footer></app-footer></app-root>
+<script src="./Portfolio_files/main.js.descarga" type="module"></script>
+
+</body></html>
