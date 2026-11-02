@@ -1,0 +1,49 @@
+<section id="experience" class="experience-section">
+
+  <div class="background-glow"></div>
+
+  <h2 class="section-title">
+    Timeline
+  </h2>
+
+  <div class="timeline">
+
+    <div class="timeline-line"></div>
+
+    <div class="timeline-progress"></div>
+
+    @for (item of timelineItems; track item.year; let i = $index) {
+
+      <div
+        class="timeline-item"
+        [class.reverse]="i % 2 !== 0">
+
+        <div class="card">
+
+          <span class="year">
+            {{ item.year }}
+          </span>
+
+          <h3>
+            {{ item.title }}
+          </h3>
+
+          <h4>
+            {{ item.company }}
+          </h4>
+
+          <p>
+            {{ item.description }}
+          </p>
+
+        </div>
+
+        <div class="dot"></div>
+
+      </div>
+
+    }
+
+  </div>
+
+</section>

@@ -32,6 +32,8 @@ export class Background implements AfterViewInit {
 
   private mouseX = 0;
   private mouseY = 0;
+  private glowX = 0;
+  private glowY = 0;
 
   private animationId = 0;
 
@@ -259,17 +261,22 @@ export class Background implements AfterViewInit {
         0,
         this.mouseX,
         this.mouseY,
-        250
+        80
       );
 
     gradient.addColorStop(
       0,
-      'rgba(0,180,255,0.18)'
+      'rgba(0,229,255,0.20)'
+    );
+
+    gradient.addColorStop(
+      0.4,
+      'rgba(0,229,255,0.10)'
     );
 
     gradient.addColorStop(
       1,
-      'rgba(0,180,255,0)'
+      'rgba(0,229,255,0)'
     );
 
     this.ctx.fillStyle = gradient;

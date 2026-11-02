@@ -1,0 +1,156 @@
+.experience-section {
+  position: relative;
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  color: white;
+  
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.timeline-line {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background: rgba(255,255,255,.15);
+
+  transform: translateX(-50%);
+}
+
+.timeline-progress {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 4px;
+  height: 0;
+
+  transform: translateX(-50%);
+
+  background: #0059ff;
+
+  box-shadow:
+    0 0 10px #008cff,
+    0 0 20px #00d9ff,
+    0 0 40px #0011ff;
+}
+
+.timeline-item {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-start;
+
+  margin-bottom: 6rem;
+}
+
+.timeline-item.reverse {
+  justify-content: flex-end;
+}
+
+.card {
+  width: 45%;
+
+  padding: 2rem;
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,.05);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.1);
+
+  transition: all .4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 15px rgba(0, 191, 255, 0.6),
+    0 0 30px rgba(0, 191, 255, 0.45),
+    0 0 60px rgba(0, 191, 255, 0.3),
+    0 0 100px rgba(0, 191, 255, 0.15);
+}
+
+.dot {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: #011336;
+
+  box-shadow:
+    0 0 10px #008cff,
+    0 0 20px #00d9ff,
+    0 0 40px #0011ff;
+}
+
+.year {
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.card h3 {
+  color: rgba(255,255,255,.65);
+  margin: .5rem 0;
+  font-size: 1.8rem;
+}
+
+.card h4 {
+  color: rgba(255,255,255,.65);
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: rgba(255,255,255,.8);
+}
+
+@media (max-width: 768px) {
+
+  .timeline-line,
+  .timeline-progress {
+    left: 20px;
+  }
+
+  .dot {
+    left: 20px;
+  }
+
+  .timeline-item,
+  .timeline-item.reverse {
+    justify-content: flex-start;
+  }
+
+  .card {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+
+}
