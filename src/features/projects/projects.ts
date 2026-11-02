@@ -148,6 +148,24 @@ export class Projects implements OnInit, OnDestroy {
       featured: false
     },
     {
+      title: 'Flappy Fish',
+      shortDescription:
+        'Minijuego de superar barreras de coral.',
+      description: `Minijuego tipo flappyfish de dinamica loop sencillo pero con añadido de fisicas de juegos, colision, subida de nivel y dificultad...
+      Realizado solo con Angular. Dinámicas de juego recreadas con html, css y javascript  `,
+      image: 'shark.jpg',
+      technologies: [
+        'signals',
+        'Html',
+        'Css',
+        'Angular'
+      ],
+      challenges: ['Fisicas de juegos', 'Dominio de Angular', 'Estructura de loop para juegos'],
+      github: 'https://github.com/CarlosSensei/flappyfish',
+      demo: 'https://carlossensei.github.io/flappyfish/',
+      featured: false
+    },
+    {
       title: 'AI Governance',
       shortDescription:
         'Panel de gestión y gobierno de iniciativas IA.',
