@@ -166,6 +166,25 @@ export class Projects implements OnInit, OnDestroy {
       featured: false
     },
     {
+      title: 'Ronin UI',
+      shortDescription:
+        'Libreria de componentes UI con Angular.',
+      description: `Libreria en desarrollo de componentes para Angular. Debido a una necesidad personal de reutilizar muchos componentes en diferentes proyectos, 
+      pues decidí crear la mia propia con fines educativos y de reutilizacion futura.  `,
+      image: 'code.jpg',
+      technologies: [
+        'signals',
+        'compute',
+        'Html',
+        'Css',
+        'Angular'
+      ],
+      challenges: ['Componentes UI', 'Animaciones CSS', 'Logicas de reutilización'],
+      github: 'https://github.com/CarlosSensei/ronin-ui',
+      demo: 'https://carlossensei.github.io/ronin-ui/',
+      featured: false
+    },
+    {
       title: 'AI Governance',
       shortDescription:
         'Panel de gestión y gobierno de iniciativas IA.',
